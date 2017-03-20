@@ -15,6 +15,7 @@ public class Book {
 	private double price;
 	private Date publish_date;
 	private String description;
+	private double cost;
 
 	public Book() {
 
@@ -30,9 +31,18 @@ public class Book {
 		this.price = price;
 		this.publish_date = publish_date;
 		this.description = description;
+		cost = this.price *0.8;
 	}
 	
- 
+
+	public Book(String id) {
+		super();
+		this.id = id;
+		
+
+	}
+	
+
 
 	public String getId() {
 		return id;
@@ -96,6 +106,24 @@ public class Book {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+	/**
+	 * @return the cost
+	 */
+	public double getCost() {
+		return cost;
+	}
+
+	/**
+	 * @param cost the cost to set
+	 */
+	@XmlElement
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+
+
+	
 
 	
 	

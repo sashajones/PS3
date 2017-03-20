@@ -22,8 +22,12 @@ public class XMLReader {
 		//	Increase the price of each book
 		IncreasePrice(cat,0.10);
 		
+		SetCost(cat);
+		
 		//	Write the XML file from 'cat' object
 		WriteXMLFile(cat);
+		
+
 		
 	}
 
@@ -69,6 +73,17 @@ public class XMLReader {
 			e.printStackTrace();
 		}
 	}
+	
+	private static Catalog SetCost(Catalog cat)
+	{
+		for (Book b : cat.getBooks()) {
+			double newCost = (b.getPrice() * .8);			
+			b.setCost(Math.round(newCost * 100.0) / 100.0);
+		}
+		
+		return cat;
+	}
+	
 
 	private static Catalog ReadXMLFile() {
 
