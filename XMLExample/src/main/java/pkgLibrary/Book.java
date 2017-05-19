@@ -31,7 +31,7 @@ public class Book {
 		this.price = price;
 		this.publish_date = publish_date;
 		this.description = description;
-		cost = this.price *0.8;
+		this.cost = cost;
 	}
 	
 

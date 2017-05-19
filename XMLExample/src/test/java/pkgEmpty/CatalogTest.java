@@ -58,7 +58,7 @@ public class CatalogTest {
 		Book book1 = new Book();
 		book1.setAuthor("Jones");
 		book1.setDescription("Textbook");
-		book1.setTitle("Intro to CISC);");
+		book1.setTitle("Intro to CISC");
 		
 		c.AddBook(1, book1);
 		
